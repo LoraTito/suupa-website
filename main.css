@@ -57,7 +57,7 @@ header h1 {
 }
 
 .lentils h4 {
-   font-family: 'Caveat', cursive;
+    font-family: 'Caveat', cursive;
     color: white;
     font-size: 30px;
 }
@@ -69,7 +69,7 @@ header h1 {
     display: block;
     margin: auto;
     text-align: center;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
 }
 
 .home-text h1 {
@@ -84,8 +84,8 @@ header h1 {
     background-repeat: no-repeat;
     background-size: contain;
     padding: 50px;
-    margin: 0;
-    display: inline-block;
+    margin: auto;
+    display: block;
     height: 300px;
     padding-left: 488px;
 }
@@ -120,9 +120,9 @@ header h1 {
     background-size: contain;
     background-position: right;
     padding: 50px;
-    margin: 0;
+    margin: auto;
     width: 800px;
-    display: inline-block;
+    display: block;
     height: 300px;
     padding-right: 488px;
 }
@@ -175,4 +175,42 @@ header h1 {
 footer {
     background-image: url("img/home-page/lentils.jpg");
     height: 200px;
+}
+
+@media (max-width: 810px) {
+    .elem-left {
+        width: 323px;
+        display: block;
+        margin: auto;
+        height: 530px;
+        text-align: center;
+        padding: 310px 10px 10px 10px;
+    }
+
+    .elem-right {
+        width: 323px;
+        display: block;
+        margin: auto;
+        height: 530px;
+        background-position: top;
+        text-align: center;
+        padding: 330px 10px 10px 10px;
+    }
+
+    .home-text {
+        margin-bottom: 30px;
+    }
+
+    header img {
+        width: 220px;
+    }
+
+    .hello {
+        font-size: 90px;
+    }
+
+    .lentils h4 {
+        font-size: 25px;
+    }
+
 }

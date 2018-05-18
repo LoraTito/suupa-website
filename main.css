@@ -57,7 +57,9 @@ header h1 {
 }
 
 .home-text {
-    width: 60%;
+    /*background-color: white;*/
+    width: 100%;
+    /*padding: 100px 20%;*/
     display: block;
     margin: auto;
     text-align: center;
@@ -65,11 +67,62 @@ header h1 {
 }
 
 .home-text h1 {
+    font-family: 'Caveat', cursive;
     color: white;
 }
 
+.elem-left {
+    width: 800px;
+    background-color: white;
+    /*background-image: url("img/home-page/lentils.jpg");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+    margin: 0;
+    display: inline-block;
+    height: 300px;
+    padding-left: 488px;
+}
+
+.lentils-img {
+    background-image: url("img/home-page/lentils.jpg");
+}
+
+.zukini-img {
+    background-image: url("img/home-page/tikvicki.jpg");
+    background-size: 435px !important;
+}
+
+.parsnip-img {
+    background-image: url("img/home-page/pashtarnak.jpg");
+    background-size: 448px !important;
+}
+
+.grah-img {
+    background-image: url("img/home-page/grah.jpg");
+    /*background-size: 448px !important;*/
+}
+
+.carrots-img {
+    background-image: url("img/home-page/carrots.jpg");
+}
+
+.elem-right {
+    background-color: white;
+    /*background-image: url("img/home-page/lentils.jpg");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 50px;
+    margin: 0;
+    width: 800px;
+    display: inline-block;
+    height: 300px;
+    padding-right: 488px;
+}
+
 .home-text p {
-    color: white;
+    color: #FF6900;
     font-family: 'Lato', sans-serif;
 }
 
@@ -84,6 +137,10 @@ header h1 {
     to {
         transform: translate3d(0, 5px, 0);
     }
+}
+
+.white {
+    color: white !important;
 }
 
 .arrow {
@@ -105,7 +162,7 @@ header h1 {
     animation: bounce 0.5s;
 }
 
-footer{
-     background-image: url("img/home-page/lentils.jpg");
+footer {
+    background-image: url("img/home-page/lentils.jpg");
     height: 200px;
 }

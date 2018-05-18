@@ -56,6 +56,12 @@ header h1 {
     width: 100%;
 }
 
+.lentils h4 {
+   font-family: 'Caveat', cursive;
+    color: white;
+    font-size: 30px;
+}
+
 .home-text {
     /*background-color: white;*/
     width: 100%;
@@ -119,6 +125,10 @@ header h1 {
     display: inline-block;
     height: 300px;
     padding-right: 488px;
+}
+
+.elem-right:hover, .elem-left:hover {
+    background-color: bisque;
 }
 
 .home-text p {

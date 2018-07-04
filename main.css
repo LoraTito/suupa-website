@@ -18,12 +18,16 @@ body {
     /*background-color: #FF6900;*/
 }
 
-header {
+#header {
     height: 100px;
-    background-color: #FF6900;
-    text-align: center;
+    width: 100%;
     padding: 20px;
-    display: none;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    /*background-color: #8DC63F;*/
+    /*display: none;*/
 }
 
 header p {
@@ -41,6 +45,17 @@ header p {
     text-align: center;
 }
 
-.show {
-    display: block !important;
+.header-scroll {
+    background-color: white !important;
+    position: fixed !important;
+    color: black !important;
 }
+
+.header {
+
+}
+/*.show-header {*/
+    /*position: fixed !important;*/
+    /*background-color: white !important;*/
+    /*color: black !important;*/
+/*}*/

@@ -8,6 +8,21 @@ html {
     box-sizing: inherit;
 }
 
+@font-face {
+    font-family: blogger;
+    src: url(fonts/Blogger/BloggerSans.woff);
+}
+
+@font-face {
+    font-family: blogger-bold;
+    src: url(fonts/Blogger/BloggerSans-Bold.woff);
+}
+
+@font-face {
+    font-family: blogger-italic-bold;
+    src: url(fonts/Blogger/BloggerSans-BoldItalic.woff);
+}
+
 html,
 body {
     width: 100%;
@@ -26,6 +41,8 @@ body {
     background-color: transparent;
     color: black;
     text-align: center;
+    font-family: blogger, sans-serif;
+    z-index: 5;
     /*background-color: #8DC63F;*/
     /*display: none;*/
 }
@@ -36,7 +53,7 @@ float: left;
 
 header p {
     display: inline-block;
-    margin: 10px 50px;
+    margin: 20px 50px;
 }
 
 .home__main-image {
@@ -52,6 +69,7 @@ header p {
 }
 
 .header-scroll {
+    /*background-color: #FF6900 !important;*/
     background-color: #8DC63F !important;
     position: fixed !important;
     color: black !important;
@@ -63,10 +81,84 @@ header p {
 }
 
 .header {
-
 }
-/*.show-header {*/
-    /*position: fixed !important;*/
-    /*background-color: white !important;*/
-    /*color: black !important;*/
-/*}*/
+
+/*content home page*/
+
+/*bottles part*/
+.suupa-small {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    /*background-color: #FF6900;*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 500px;
+    /*background-image: url("img/home-page/small-bottle-orange.png");*/
+    /*background-position: left center;*/
+    padding: 10px 10px 10px 20%;
+    /*margin-left: 50px;*/
+}
+
+.suupa-small img {
+    width: auto;
+    height: 400px;
+    float: left;
+}
+
+.suupa-small:hover {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.suupa-big {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    /*background-color: #FF6900;*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 500px;
+    padding: 10px 20% 10px 10px;
+    /*margin-left: 50px;*/
+}
+
+.suupa-big img {
+    width: auto;
+    height: 400px;
+    float: right;
+}
+
+.suupa-big:hover {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+/*animations*/
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

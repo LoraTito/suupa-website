@@ -23,9 +23,7 @@ html {
     src: url(fonts/Blogger/BloggerSans-BoldItalic.woff);
 }
 
-.acrobat {
-    font-family: 'Source Sans Pro', sans-serif;
-}
+
 
 html,
 body {
@@ -40,6 +38,32 @@ body {
 h1 {
     font-family: blogger, sans-serif;
 }
+
+/*generic styles*/
+
+.acrobat {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.blogger {
+    font-family: blogger, sans-serif;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+.link {
+    color: #8DC63F;
+    font-family: blogger-bold, sans-serif;
+    cursor: pointer;
+}
+
+.link:hover {
+    font-family: blogger-italic-bold, sans-serif;
+}
+/*header*/
 
 #header {
     height: 80px;
@@ -56,7 +80,7 @@ h1 {
 }
 
 header img {
-float: left;
+    float: left;
 }
 
 header p {
@@ -94,8 +118,7 @@ header p {
 /*content home page*/
 
 /*about us*/
-
-.home__content h1 {
+h1 {
     color: #FF6900;
     text-align: center;
     font-size: 40px;
@@ -104,6 +127,7 @@ header p {
 .content-aboutus {
     margin: 30px;
     font-size: 20px;
+    text-align: center;
 }
 
 .aboutus-img,
@@ -112,7 +136,7 @@ header p {
     vertical-align: top
 }
 
-.aboutus-img{
+.aboutus-img {
     width: 700px;
     height: 500px;
     background: url("img/home-page/bike-bottle-supa.jpg") fixed;
@@ -125,48 +149,38 @@ header p {
 
 .aboutus-text {
     width: 600px;
+    margin-left: 20px;
+}
+
+.dinig-icon {
+    width: 200px;
+    height: auto;
 }
 
 /*bottles part*/
-.suupa-small {
-    font-family: 'Source Sans Pro', sans-serif !important;
-    /*background-color: #FF6900;*/
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 500px;
-    /*background-image: url("img/home-page/small-bottle-orange.png");*/
-    /*background-position: left center;*/
-    padding: 10px 10px 10px 20%;
-    /*margin-left: 50px;*/
+.suupa-bottles {
+    text-align: center;
+    margin: 100px 0;
 }
 
-.suupa-small img {
-    width: auto;
-    height: 400px;
-    float: left;
+.bottles-main-text {
+    font-size: 20px;
+    margin: 10px 20%;
 }
 
-/*.suupa-small:hover img{*/
-    /*animation: shake 1s;*/
-    /*animation-iteration-count: 10;*/
-/*}*/
-
-.suupa-big {
-    font-family: 'Source Sans Pro', sans-serif !important;
-    /*background-color: #FF6900;*/
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 500px;
-    padding: 10px 20% 10px 10px;
-    /*margin-left: 50px;*/
+.bottles {
+    display: inline-block;
+    width: 300px;
+    height: auto;
 }
 
-.suupa-big img {
-    width: auto;
-    height: 400px;
-    float: right;
+.bottles img {
+    width: 200px;
+}
+
+.bottles:hover img {
+    animation: shake 1s;
+    animation-iteration-count: 1;
 }
 
 .suupa-big:hover img,
@@ -175,19 +189,51 @@ header p {
     animation-iteration-count: 1;
 }
 
+/*footer*/
+
+footer {
+    height: 300px;
+    width: 100%;
+    background-color: #FF6900;
+}
+
+footer img {
+    margin: 50px;
+}
 /*animations*/
 
-
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }

@@ -27,24 +27,34 @@
         gtag('js', new Date());
         gtag('config', 'UA-119535905-1');
     </script>
+    <script type="text/javascript">
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            let uluru = {lat: -25.344, lng: 131.036};
+            // The map, centered at Uluru
+            let map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: uluru});
+            // The marker, positioned at Uluru
+            let marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr0XHl2GKbGgJgVk8Ce7E2EMTZKUXmVqk&callback=initMap"
+            type="text/javascript"></script>
 </head>
 
 <body onscroll="showHeader()">
 
 <div class="container">
     <header id="header">
-        <img id="suupa-logo" src="img/home-page/suupa-logo-black.png">
+        <a href="index.html"><img id="suupa-logo" src="img/home-page/suupa-logo-black.png"></a>
+        <a href="index.html"><p>ЗА НАС</p></a>
+        <p>|</p>
         <p>ПРОДУКТИ</p>
         <p>|</p>
-        <p>ОБЩНОСТ</p>
-        <p>|</p>
-        <p>КЪДЕ ДА НИ НАМЕРИТЕ</p>
+        <a href="find-us.html"><p>КЪДЕ ДА НИ НАМЕРИТЕ</p></a>
     </header>
-    <section class="home__main-image" id="second-section"></section>
-    <section class="home__content">
-        <div class="content-aboutus">
-            <h1>Къде да ни намерите?</h1>
-        </div>
+    <section class="findus__map" id="map">
     </section>
 </div>
 

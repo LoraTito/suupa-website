@@ -39,6 +39,14 @@ h1 {
     font-family: blogger, sans-serif;
 }
 
+a {
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
 /*generic styles*/
 
 .acrobat {
@@ -187,6 +195,15 @@ h1 {
 .suupa-small:hover img {
     animation: shake 1s;
     animation-iteration-count: 1;
+}
+
+/*where to find us*/
+
+.findus__map {
+    width: 100%;
+    height: 100vh;
+    position: static;
+    text-align: center;
 }
 
 /*footer*/

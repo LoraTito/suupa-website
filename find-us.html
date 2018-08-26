@@ -29,15 +29,90 @@
     </script>
     <script type="text/javascript">
         // Initialize and add the map
+        // function initMap() {
+        //     // The location of Uluru
+        //     let uluru = {lat: -25.344, lng: 131.036};
+        //     // The map, centered at Uluru
+        //     let map = new google.maps.Map(
+        //         document.getElementById('map'), {zoom: 4, center: uluru});
+        //     // The marker, positioned at Uluru
+        //     let marker = new google.maps.Marker({position: cycle, map: map});
+        // }
+
+
         function initMap() {
-            // The location of Uluru
-            let uluru = {lat: -25.344, lng: 131.036};
-            // The map, centered at Uluru
-            let map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 4, center: uluru});
-            // The marker, positioned at Uluru
-            let marker = new google.maps.Marker({position: uluru, map: map});
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: {lat: 42.694234, lng: 23.326441}
+            });
+
+            // Create an array of alphabetical characters used to label the markers.
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+            // Add some markers to the map.
+            // Note: The code uses the JavaScript Array.prototype.map() method to
+            // create an array of markers based on a given "locations" array.
+            // The map() method here has nothing to do with the Google Maps API.
+            var markers = locations.map(function(location, i) {
+                return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                });
+            });
+
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
         }
+        var locations = [
+            {lat: 42.672028, lng: 23.310611},
+            {lat: 42.664667, lng: 23.266806},
+            {lat: 42.670984, lng: 23.326234},
+            {lat: 42.671613, lng: 23.326187},
+            {lat: 42.661278, lng: 23.316861},
+            {lat: 42.678921, lng: 23.320800},
+            {lat: 42.657761, lng: 23.314965},
+            {lat: 42.659047, lng: 23.314388},
+            {lat: 42.681306, lng: 23.328000},
+            {lat: 42.683888, lng: 23.330266},
+            {lat: 42.676174, lng: 23.308697},
+            {lat: 42.676107, lng: 23.299585},
+            {lat: 42.669806, lng: 23.303861},
+            {lat: 42.667556, lng: 23.292000},
+            {lat: 42.656176, lng: 23.285325},
+            {lat: 42.656946, lng: 23.285860},
+            {lat: 42.659069, lng: 23.284993},
+            {lat: 42.660681, lng: 23.282764},
+            {lat: 42.685611, lng: 23.298161}
+
+
+            // {lat: -33.718234, lng: 150.363181},
+            // {lat: -33.727111, lng: 150.371124},
+            // {lat: -33.848588, lng: 151.209834},
+            // {lat: -33.851702, lng: 151.216968},
+            // {lat: -34.671264, lng: 150.863657},
+            // {lat: -35.304724, lng: 148.662905},
+            // {lat: -36.817685, lng: 175.699196},
+            // {lat: -36.828611, lng: 175.790222},
+            // {lat: -37.750000, lng: 145.116667},
+            // {lat: -37.759859, lng: 145.128708},
+            // {lat: -37.765015, lng: 145.133858},
+            // {lat: -37.770104, lng: 145.143299},
+            // {lat: -37.773700, lng: 145.145187},
+            // {lat: -37.774785, lng: 145.137978},
+            // {lat: -37.819616, lng: 144.968119},
+            // {lat: -38.330766, lng: 144.695692},
+            // {lat: -39.927193, lng: 175.053218},
+            // {lat: -41.330162, lng: 174.865694},
+            // {lat: -42.734358, lng: 147.439506},
+            // {lat: -42.734358, lng: 147.501315},
+            // {lat: -42.735258, lng: 147.438000},
+            // {lat: -43.999792, lng: 170.463352}
+        ]
+
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr0XHl2GKbGgJgVk8Ce7E2EMTZKUXmVqk&callback=initMap"
             type="text/javascript"></script>

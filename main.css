@@ -134,7 +134,7 @@ h1 {
 .content-aboutus {
     margin: 30px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .aboutus-img,
@@ -144,7 +144,7 @@ h1 {
 }
 
 .aboutus-img {
-    width: 700px;
+    width: 48%;
     height: 500px;
     background: url("img/home-page/bike-bottle-supa.jpg") fixed;
     background-size: contain;
@@ -155,9 +155,11 @@ h1 {
 }
 
 .aboutus-text {
-    width: 100%;
+    width: 48%;
     padding: 10px 50px;
     margin-left: 20px;
+    text-align: center;
+    display: inline-block;
 }
 
 .dinig-icon {

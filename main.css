@@ -156,7 +156,7 @@ h1 {
 
 .aboutus-text {
     width: 48%;
-    padding: 10px 50px;
+    padding: 0 50px;
     margin-left: 20px;
     text-align: center;
     display: inline-block;
@@ -260,13 +260,23 @@ footer img {
 }
 
 /*media*/
-@media (max-width: 1500px) {
+@media (max-width: 1250px) {
  .aboutus-img {
         background-size: contain;
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: 81px;
          background-position: center;
+     display: block;
+     margin: auto;
+     width: 100%;
+    }
+
+    .aboutus-text {
+        display: block;
+        margin: auto;
+        width: 100%;
+        padding-top: 40px;
     }
 }
 @media (max-width: 1000px) {

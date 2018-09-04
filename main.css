@@ -23,8 +23,6 @@ html {
     src: url(fonts/Blogger/BloggerSans-BoldItalic.woff);
 }
 
-
-
 html,
 body {
     width: 100%;
@@ -71,6 +69,7 @@ a:hover {
 .link:hover {
     font-family: blogger-italic-bold, sans-serif;
 }
+
 /*header*/
 
 #header {
@@ -97,7 +96,7 @@ header p {
 }
 
 .home__main-image {
-    width: 90%;
+    width: 100%;
     height: 100vh;
     background-image: url("img/home-page/suupa-products.jpg");
     background-repeat: no-repeat;
@@ -156,7 +155,8 @@ h1 {
 }
 
 .aboutus-text {
-    width: 600px;
+    width: 100%;
+    padding: 10px 50px;
     margin-left: 20px;
 }
 
@@ -218,6 +218,7 @@ footer {
 footer img {
     margin: 50px;
 }
+
 /*animations*/
 
 @keyframes shake {
@@ -254,4 +255,24 @@ footer img {
     100% {
         transform: translate(1px, -2px) rotate(-1deg);
     }
+}
+
+/*media*/
+@media (max-width: 1500px) {
+ .aboutus-img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 81px;
+         background-position: center;
+    }
+}
+@media (max-width: 1000px) {
+    .aboutus-img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 81px;
+    }
+
 }

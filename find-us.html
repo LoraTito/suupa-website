@@ -49,42 +49,53 @@
 
             // Create an array of alphabetical characters used to label the markers.
             var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var openWindow;
 
             // Add some markers to the map.
             // Note: The code uses the JavaScript Array.prototype.map() method to
             // create an array of markers based on a given "locations" array.
             // The map() method here has nothing to do with the Google Maps API.
-            var markers = locations.map(function(location, i) {
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
+            locations.map(function(location, i) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: location
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: '<b>' + location.label + '</b>'
+                });
+                marker.addListener('click', function() {
+                    if (openWindow) {
+                        openWindow.close();
+                    }
+                    infowindow.open(map, marker);
+                    openWindow = infowindow;
                 });
             });
 
             // Add a marker clusterer to manage the markers.
-            var markerCluster = new MarkerClusterer(map, markers,
-                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+            // var markerCluster = new MarkerClusterer(map, markers,
+            //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
         }
         var locations = [
-            {lat: 42.672028, lng: 23.310611},
-            {lat: 42.664667, lng: 23.266806},
-            {lat: 42.670984, lng: 23.326234},
-            {lat: 42.671613, lng: 23.326187},
-            {lat: 42.661278, lng: 23.316861},
-            {lat: 42.678921, lng: 23.320800},
-            {lat: 42.657761, lng: 23.314965},
-            {lat: 42.659047, lng: 23.314388},
-            {lat: 42.681306, lng: 23.328000},
-            {lat: 42.683888, lng: 23.330266},
-            {lat: 42.676174, lng: 23.308697},
-            {lat: 42.676107, lng: 23.299585},
-            {lat: 42.669806, lng: 23.303861},
-            {lat: 42.667556, lng: 23.292000},
-            {lat: 42.656176, lng: 23.285325},
-            {lat: 42.656946, lng: 23.285860},
-            {lat: 42.659069, lng: 23.284993},
-            {lat: 42.660681, lng: 23.282764},
-            {lat: 42.685611, lng: 23.298161}
+            {lat: 42.672028, lng: 23.310611, label: 'САЙКЪЛ 2015, Димитър Хаджикоцев 110, магазин 3'},
+            {lat: 42.664667, lng: 23.266806, label: 'Тренолино, бул. „Ал.Пушкин“, бл. 63'},
+            {lat: 42.670984, lng: 23.326234, label: 'ab Market,  ул. Бигла 30А'},
+            {lat: 42.671613, lng: 23.326187, label: 'Маркиз 76,  ул. Плачковица 2'},
+            {lat: 42.661278, lng: 23.316861, label: 'Георгиев АЕ,  бул  Черни връх 96'},
+            {lat: 42.678921, lng: 23.320800, label: 'Фреш Брандс, Park Centre, Арсеналски 2'},
+            {lat: 42.657761, lng: 23.314965, label: 'ДОЛЧЕ САНО, Paradise Centre'},
+            {lat: 42.659047, lng: 23.314388, label: 'Хеви - 7, Paradise Centre'},
+            {lat: 42.681306, lng: 23.328000, label: 'МАКСЛАЙФ ТРЕЙДИНГ, ул. Краище 3'},
+            {lat: 42.683888, lng: 23.330266, label: 'Радост Толева, ул. Деде Агач 34'},
+            {lat: 42.676174, lng: 23.308697, label: 'Онда, Южен Парк Павилион "ЕСПРЕШЪН"'},
+            {lat: 42.676107, lng: 23.299585, label: 'ЛИЯ 8, кв. Гоце Делчев бл.53Е, Маг.12 (Зад Бизнес Център Манджуков)'},
+            {lat: 42.669806, lng: 23.303861, label: 'НЕФФЕР, Бул България 111'},
+            {lat: 42.667556, lng: 23.292000, label: 'ПиП Маринови, InOffice Vertigo - бул. "България" №109'},
+            {lat: 42.656176, lng: 23.285325, label: 'Планината, бул. България 106'},
+            {lat: 42.656946, lng: 23.285860, label: 'ТМ Спиритс, Ул. Ралевица 87, магазин 3'},
+            {lat: 42.659069, lng: 23.284993, label: 'ДИХ 87, бул. Цар Борис III 19А'},
+            {lat: 42.660681, lng: 23.282764, label: 'Ранди, ул.Нишава №4'},
+            {lat: 42.685611, lng: 23.298161, label: 'ДИХ 87, бул. Цар Борис III 19А'}
 
 
             // {lat: -33.718234, lng: 150.363181},

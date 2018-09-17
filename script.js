@@ -16,6 +16,6 @@ function showHeader() {
 }
 
 function myFunction(x) {
-    document.getElementById("mobile-menu").classList.remove("mobile-nav");
+    document.getElementById("mobile-menu").classList.toggle("mobile-nav");
     x.classList.toggle("change");
 }

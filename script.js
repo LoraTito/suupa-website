@@ -14,3 +14,8 @@ function showHeader() {
         }
     });
 }
+
+function myFunction(x) {
+    document.getElementById("mobile-menu").classList.remove("mobile-nav");
+    x.classList.toggle("change");
+}

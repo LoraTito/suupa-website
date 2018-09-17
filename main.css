@@ -169,7 +169,7 @@ h1 {
 .content-aboutus {
     margin: 30px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .aboutus-img,
@@ -179,7 +179,7 @@ h1 {
 }
 
 .aboutus-img {
-    width: 700px;
+    width: 48%;
     height: 500px;
     background: url("img/home-page/bike-bottle-supa.jpg") fixed;
     background-size: contain;
@@ -190,9 +190,11 @@ h1 {
 }
 
 .aboutus-text {
-    width: 100%;
-    padding: 10px 50px;
+    width: 48%;
+    padding: 0 50px;
     margin-left: 20px;
+    text-align: center;
+    display: inline-block;
 }
 
 .dinig-icon {
@@ -293,13 +295,23 @@ footer img {
 }
 
 /*media*/
-@media (max-width: 1500px) {
+@media (max-width: 1250px) {
  .aboutus-img {
         background-size: contain;
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: 81px;
          background-position: center;
+     display: block;
+     margin: auto;
+     width: 100%;
+    }
+
+    .aboutus-text {
+        display: block;
+        margin: auto;
+        width: 100%;
+        padding-top: 40px;
     }
 }
 @media (max-width: 1000px) {

@@ -439,7 +439,9 @@ footer:last-child {
 
     header img {
         float: none;
-        width: 100px;
+        width: 70px;
+        position: relative;
+        top: -42px;
     }
 
     .header-scroll {

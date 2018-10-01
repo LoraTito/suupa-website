@@ -260,7 +260,7 @@ h1 {
 .aboutus-img {
     width: 48%;
     height: 500px;
-    background: url("img/home-page/bike-bottle-supa.jpg") fixed;
+    background: url("img/home-page/suupa-bag.jpeg") fixed;
     background-size: contain;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
@@ -340,14 +340,6 @@ footer img {
     margin: 10px;
     width: 15%;
     max-width: 160px;
-}
-
-footer:first-child {
-    text-align: left;
-}
-
-footer:last-child {
-    text-align: right;
 }
 
 /*animations*/

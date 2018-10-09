@@ -55,7 +55,7 @@
             // Note: The code uses the JavaScript Array.prototype.map() method to
             // create an array of markers based on a given "locations" array.
             // The map() method here has nothing to do with the Google Maps API.
-            locations.map(function(location, i) {
+            locations.map(function (location, i) {
                 var marker = new google.maps.Marker({
                     map: map,
                     position: location
@@ -63,7 +63,7 @@
                 var infowindow = new google.maps.InfoWindow({
                     content: '<b>' + location.label + '</b>'
                 });
-                marker.addListener('click', function() {
+                marker.addListener('click', function () {
                     if (openWindow) {
                         openWindow.close();
                     }
@@ -92,9 +92,17 @@
             {lat: 42.676107, lng: 23.308748, label: 'Макслайф Трейдинг, ул. Краище 3'},
             {lat: 42.676056, lng: 23.299634, label: 'Радост Толева, ул. Деде Агач 34'},
             {lat: 42.669806, lng: 23.303861, label: 'Онда, Южен Парк Павилион "ЕСПРЕШЪН"'},
-            {lat: 42.667556, lng: 23.292000, label: 'Лия, кв. Гоце Делчев бл.53Е, Маг.12 (Зад Бизнес Център Манджуков)'},
+            {
+                lat: 42.667556,
+                lng: 23.292000,
+                label: 'Лия, кв. Гоце Делчев бл.53Е, Маг.12 (Зад Бизнес Център Манджуков)'
+            },
             {lat: 42.656188, lng: 23.285351, label: 'Неффер, Бул България 111'},
-            {lat: 42.657103, lng: 23.285660, label: 'InOffice Food & Drinks Vertigo, бул. „България“ 109, 1404 кв. Манастирски ливади'},
+            {
+                lat: 42.657103,
+                lng: 23.285660,
+                label: 'InOffice Food & Drinks Vertigo, бул. „България“ 109, 1404 кв. Манастирски ливади'
+            },
             {lat: 42.659057, lng: 23.285020, label: 'Планината, бул. България 106'},
             {lat: 42.660732, lng: 23.282780, label: 'ТМ Спиритс, Ул. Ралевица 87, магазин 3'},
             {lat: 42.685772, lng: 23.298434, label: 'ДИХ 87, бул. Цар Борис III 19А'},
@@ -112,7 +120,7 @@
             {lat: 42.666865, lng: 23.347939, label: ' ИВОСЛАВА, Тинтява №25А'},
             {lat: 42.667263, lng: 23.353840, label: 'Спот, ул. Тинтява 13Б'},
             {lat: 42.699916, lng: 23.312649, label: 'Спот, бул. Т. Александров №18'},
-            {lat: 42.665403, lng: 23.349725, label: 'Джой Арт, Ул. Пимен Зогравски №20' },
+            {lat: 42.665403, lng: 23.349725, label: 'Джой Арт, Ул. Пимен Зогравски №20'},
             {lat: 42.660538, lng: 23.341714, label: 'M2, Ж.К. Дианабад бл.5 вх. Б'},
             {lat: 42.674874, lng: 23.315640, label: 'Fresh Bar, ул. Димитър Хаджикоцев'},
             {lat: 42.696582, lng: 23.319352, label: 'Магазин Зелен, ул. „Лавеле“ 20-22'},
@@ -120,14 +128,106 @@
             {lat: 42.696429, lng: 23.338171, label: 'Магазин Зелен, бул. „Янко Сакъзов“ 24'},
             {lat: 42.660372, lng: 23.313580, label: 'Магазин Зелен, ул. „Кишинев“ 17'},
             {lat: 42.691848, lng: 23.353412, label: 'Магазин Зелен,  бул. „Ситняково“ 48, Сердика Център'},
-            {lat: 43.206675, lng: 27.916209, label: 'Магазин Зелен, ул. „27-ми юли“ 68'}
+            {lat: 43.206675, lng: 27.916209, label: 'Магазин Зелен, ул. „27-ми юли“ 68'},
 
+            // Обекти на ОМВ
+            // {"lat": 42.71073, "lng": 23.30837, "label": "OMV, General Stoletov Blvd 27, гр. София"},
+            // {"lat": 42.47278, "lng": 26.5225, "label": "OMV, Graf Ignatiev Blvd, гр. Ямбол"},
+            // {"lat": 42.65153, "lng": 23.28747, "label": "OMV, Ring Road, гр. София"},
+            // {"lat": 42.69113, "lng": 23.29554, "label": "OMV, Giushevo 83, гр. София"},
+            // {"lat": 42.65127, "lng": 23.37949, "label": "OMV, Alexander Malinov Blvd, гр. София"},
+            // {"lat": 43.22822, "lng": 27.87754, "label": "OMV, Republika Blvd, гр. Варна"},
+            // {"lat": 43.2284, "lng": 27.90302, "label": "OMV, Tzar Osvoboditel Blvd 1, гр. Варна"},
+            // {"lat": 42.7117, "lng": 23.33111, "label": "OMV, Zadgarova Arteria-202, гр. София"},
+            // {"lat": 42.9548, "lng": 24.02133, "label": "OMV, Highway Hemus, гр. Осиковица"},
+            // {"lat": 42.05495, "lng": 25.60401, "label": "OMV, Dimiter Blagoev Blvd, гр. Димитровград"},
+            // {"lat": 42.70792, "lng": 23.34167, "label": "OMV, Rezbarska 4, гр. София"},
+            // {"lat": 42.71614, "lng": 23.28222, "label": "OMV, Slivnitza Blvd 132, гр. София"},
+            // {"lat": 42.68958, "lng": 23.27669, "label": "OMV, Nikola Mushanov Blvd 114, гр. София"},
+            // {"lat": 42.608, "lng": 27.3815, "label": "OMV, E 773, гр. Ветрен"},
+            // {"lat": 42.5159, "lng": 27.46141, "label": "OMV, Stefan Stambolov Blvd 113, гр. Бургас"},
+            // {"lat": 42.18627, "lng": 24.35109, "label": "OMV, Plovdivska, гр. Пазарджик"},
+            // {"lat": 42.41889, "lng": 25.60664, "label": "OMV, Tri Chuchura, гр. Стара Загора"},
+            // {"lat": 42.00646, "lng": 23.0952, "label": "OMV, Dimiter Solunski 77, гр. Благоевград"},
+            // {"lat": 43.27507, "lng": 26.93526, "label": "OMV, Simeon Veliki Blvd, гр. Шумен"},
+            // {"lat": 43.21956, "lng": 27.92707, "label": "OMV, Mir Blvd, гр. Варна"},
+            // {"lat": 43.19954, "lng": 27.91147, "label": "OMV, Dunav   1, гр. Варна"},
+            // {"lat": 43.23427, "lng": 23.14152, "label": "OMV, Alexandrovska, гр. Берковица"},
+            // {"lat": 41.95209, "lng": 25.55736, "label": "OMV, Dimitrovgradsko Shosse, гр. Хасково"},
+            // {"lat": 41.58333, "lng": 24.68389, "label": "OMV, 1st May 52, гр. Смолян"},
+            // {"lat": 42.72291, "lng": 23.30678, "label": "OMV, Lomsko Shosse Blvd 2, гр. София"},
+            // {"lat": 42.15807, "lng": 24.73444, "label": "OMV, Bulgaria Blvd 97, гр. Пловдив"},
+            // {"lat": 42.68244, "lng": 23.24291, "label": "OMV, Boicho Boichev 66, гр. София"},
+            // {"lat": 42.65824, "lng": 23.27166, "label": "OMV, Bratia Buxton Blvd 83, гр. София"},
+            // {"lat": 42.70181, "lng": 23.35125, "label": "OMV, Vladimir Vazov Blvd 1, гр. София"},
+            // {"lat": 42.31957, "lng": 24.13007, "label": "OMV, Highway Trakia 73 km, гр. Виноградец"},
+            // {"lat": 42.65093, "lng": 23.35752, "label": "OMV, 8th December Blvd, гр. София"},
+            // {"lat": 42.7071, "lng": 23.41056, "label": "OMV, Botevgradsko Shosse 264, гр. София"},
+            // {"lat": 43.07306, "lng": 25.61722, "label": "OMV, Magistralna Str 6, гр. Велико Търново"},
+            // {"lat": 41.8127, "lng": 26.1616, "label": "OMV, Maritza Highway  97 km, left, гр. Момково"},
+            // {"lat": 42.28482, "lng": 23.12303, "label": "OMV, E79, гр. Дупница"},
+            // {"lat": 42.64637, "lng": 26.66864, "label": "OMV, , гр. Горно Александрово"},
+            // {"lat": 42.5453, "lng": 26.44623, "label": "OMV, Автомагистрала Тракия + 278 км, гр. Дражево"},
+            // {"lat": 42.65704, "lng": 23.38586, "label": "OMV, Tsarigradsko Shosse Blvd, гр. София"},
+            // {"lat": 42.12917, "lng": 24.75639, "label": "OMV, Kuklensko Shosse Blvd, гр. Пловдив"},
+            // {"lat": 43.42083, "lng": 23.22833, "label": "OMV, 3rd March Blvd, гр. Монтана"},
+            // {"lat": 42.19156, "lng": 25.19136, "label": "OMV, Trakia Motorway, гр. Оризово"},
+            // {"lat": 42.70958, "lng": 23.42812, "label": "OMV, Botevgradsko Shosse 2, гр. София"},
+            // {"lat": 42.5308, "lng": 26.3984, "label": "OMV, Trakia highway 273 km, гр. Автомагистрала Тракия + 277 км"},
+            // {"lat": 42.62146, "lng": 23.40391, "label": "OMV, Samokovsko Shosse Blvd, гр. София"},
+            // {"lat": 43.99194, "lng": 22.86663, "label": "OMV, Panonia Blvd 46, гр. Видин"},
+            // {"lat": 42.52816, "lng": 27.45284, "label": "OMV, Stefan Stambolov 1, гр. Бургас"},
+            // {"lat": 43.83, "lng": 25.97345, "label": "OMV, Hristo Botev Blvd, гр. Русе"},
+            // {"lat": 42.60764, "lng": 23.05, "label": "OMV, General Kolev Blvd, гр. Перник"},
+            // {"lat": 42.86558, "lng": 25.31773, "label": "OMV, Vasil Aprilov Blvd 54, гр. Габрово"},
+            // {"lat": 43.57028, "lng": 27.8375, "label": "OMV, Russia Blvd, гр. Добрич"},
+            // {"lat": 42.66152, "lng": 23.39176, "label": "OMV, Prof. Tzvetan Lazarov 1, гр. София"},
+            // {"lat": 42.61611, "lng": 25.42083, "label": "OMV, Alexander Batenberg Blvd 220, гр. Казанлък"},
+            // {"lat": 42.64167, "lng": 23.40421, "label": "OMV, Tsarigradsko Shosse Blvd, гр. София"},
+            // {"lat": 42.66757, "lng": 23.29071, "label": "OMV, Bulgaria Blvd 45, гр. София"},
+            // {"lat": 43.52806, "lng": 26.51806, "label": "OMV, Strandja Blvd 1, гр. Разград"},
+            // {"lat": 42.66168, "lng": 23.3774, "label": "OMV, Tsarigradsko Shosse Blvd, гр. София"},
+            // {"lat": 43.24889, "lng": 26.55083, "label": "OMV, Ring Road, гр. Търговище"},
+            // {"lat": 42.70362, "lng": 23.31081, "label": "OMV, Opalchenska Str 35, гр. София"},
+            // {"lat": 43.31972, "lng": 27.11556, "label": "OMV, Hemus Highway, гр. Каспичан"},
+            // {"lat": 43.32056, "lng": 27.11556, "label": "OMV, Hemus Highway, гр. Каспичан"},
+            // {"lat": 43.18417, "lng": 25.62056, "label": "OMV, Vasil Levski Str 20, гр. Поликраище"},
+            // {"lat": 42.03031, "lng": 23.0572, "label": "OMV, E79, гр. Благоевград"},
+            // {"lat": 42.09407, "lng": 24.73973, "label": "OMV, Ring Road, гр. Пловдив"},
+            // {"lat": 42.27847, "lng": 24.27792, "label": "OMV, Trakia Highway 86 km, гр. Динката"},
+            // {"lat": 42.13472, "lng": 25.06583, "label": "OMV, , гр. Поповица"},
+            // {"lat": 42.69093, "lng": 23.36995, "label": "OMV, Slatinska 13, гр. София"},
+            // {"lat": 43.46971, "lng": 25.71497, "label": "OMV, Kolio Ficheto Str, гр. Бяла"},
+            // {"lat": 42.73249, "lng": 23.3139, "label": "OMV, Rojen Blvd 22, гр. София"},
+            // {"lat": 42.62885, "lng": 23.34503, "label": "OMV, Ring Road, гр. София"},
+            // {"lat": 42.41939, "lng": 25.63034, "label": "OMV, Ruski Blvd, гр. Стара Загора"},
+            // {"lat": 43.216, "lng": 27.89665, "label": "OMV, Vladislav Varnenchik Blvd 158, гр. Варна"},
+            // {"lat": 42.95709, "lng": 24.02452, "label": "OMV, Hemus highway 57 km, гр. Осиковица"},
+            // {"lat": 42.16179, "lng": 24.73006, "label": "OMV, Dunav Blvd, гр. Пловдив"},
+            // {"lat": 43.22008, "lng": 27.93833, "label": "OMV, Vasil Levski Blvd, гр. Варна"},
+            // {"lat": 43.1951, "lng": 23.56628, "label": "OMV, 2nd June Blvd 2, гр. Враца"},
+            // {"lat": 43.42398, "lng": 24.60045, "label": "OMV, Tzar Samuil, гр. Плевен"},
+            // {"lat": 42.71063, "lng": 23.27221, "label": "OMV, Pirotski Blvd, гр. София"},
+            // {"lat": 43.83352, "lng": 25.95413, "label": "OMV, Midia Enos Blvd, гр. Русе"},
+            // {"lat": 44.11333, "lng": 27.25333, "label": "OMV, Albena Square 2, гр. Силистра"},
+            // {"lat": 43.07364, "lng": 25.61575, "label": "OMV, Magistralna, гр. Велико Търново"},
+            // {"lat": 41.62982, "lng": 25.37768, "label": "OMV, Belomorski Blvd, гр. Кърджали"},
+            // {"lat": 42.50073, "lng": 26.01038, "label": "OMV, Patriarch Eftimii Blvd, гр. Нова Загора"},
+            // {"lat": 41.54677, "lng": 23.27037, "label": "OMV, E79, гр. Сандански"},
+            // {"lat": 42.66324, "lng": 23.35833, "label": "OMV, G.M.Dimitrov Blvd, гр. София"},
+            // {"lat": 42.21897, "lng": 25.04147, "label": "OMV, Highway Trakia, гр. Белозем"},
+            // {"lat": 42.1494, "lng": 24.77762, "label": "OMV, Maria Luisa Blvd, гр. Пловдив"},
+            // {"lat": 41.39726, "lng": 23.35516, "label": "OMV, Автомагистрала Струма km 166+500, гр. Чучулигово"},
+            // {"lat": 42.69306, "lng": 27.70056, "label": "OMV, E87, гр. Несебър"},
+            // {"lat": 41.90899, "lng": 25.96322, "label": "OMV, Maritza highway Km 76,5 south, гр. Harmanli"},
+            // {"lat": 41.39662, "lng": 23.35518, "label": "OMV, Автомагистрала Струма km 166+500, гр. Чучулигово"}
         ]
 
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr0XHl2GKbGgJgVk8Ce7E2EMTZKUXmVqk&callback=initMap"
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr0XHl2GKbGgJgVk8Ce7E2EMTZKUXmVqk&callback=initMap"
             type="text/javascript"></script>
 </head>
 

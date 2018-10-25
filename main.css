@@ -79,6 +79,16 @@ a:hover {
     float: right;
     text-align: right;
 }
+
+.block-center {
+    display: block;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
 /*header*/
 
 #header {
@@ -167,75 +177,75 @@ header p {
     background-color: white;
     width: 100vw;
     height: 100vh;
-
-
+    z-index: 2;
 
     /*animation-name: slideDown;*/
-	/*-webkit-animation-name: slideDown;*/
+    /*-webkit-animation-name: slideDown;*/
 
-	/*animation-duration: 1s;*/
-	/*-webkit-animation-duration: 1s;*/
+    /*animation-duration: 1s;*/
+    /*-webkit-animation-duration: 1s;*/
 
-	/*animation-timing-function: linear;*/
-	/*-webkit-animation-timing-function: linear;*/
+    /*animation-timing-function: linear;*/
+    /*-webkit-animation-timing-function: linear;*/
 }
 
 @keyframes slideDown {
-	0% {
-		-webkit-transform: translateY(-100%);
-	}
-	40%{
-		-webkit-transform: translateY(-4%);
-	}
-	80%{
-		-webkit-transform: translateY(-2%);
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-	}
+    0% {
+        -webkit-transform: translateY(-100%);
+    }
+    40% {
+        -webkit-transform: translateY(-4%);
+    }
+    80% {
+        -webkit-transform: translateY(-2%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
 }
 
 @-webkit-keyframes slideDown {
-	0% {
-		-webkit-transform: translateY(-100%);
-	}
-	40%{
-		-webkit-transform: translateY(-4%);
-	}
-	80%{
-		-webkit-transform: translateY(-2%);
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-	}
+    0% {
+        -webkit-transform: translateY(-100%);
+    }
+    40% {
+        -webkit-transform: translateY(-4%);
+    }
+    80% {
+        -webkit-transform: translateY(-2%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
 }
 
 .mobile-nav {
     display: none;
-        animation-name: slideUp;
-	-webkit-animation-name: slideUp;
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
 
-	animation-duration: 1s;
-	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
 
-	animation-timing-function: linear;
-	-webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
 }
 
 @-webkit-keyframes slideUp {
-	0% {
-		-webkit-transform: translateY(-100%);
-	}
-	40%{
-		-webkit-transform: translateY(-4%);
-	}
-	80%{
-		-webkit-transform: translateY(-2%);
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-	}
+    0% {
+        -webkit-transform: translateY(-100%);
+    }
+    40% {
+        -webkit-transform: translateY(-4%);
+    }
+    80% {
+        -webkit-transform: translateY(-2%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
 }
+
 /*content home page*/
 
 /*about us*/
@@ -323,6 +333,38 @@ h1 {
     padding-top: 30px;
 }
 
+.findus__online {
+    width: 500px;
+    height: 120px;
+    background-color: white;
+    margin-top: 30px;
+    z-index: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.findus__online p {
+    display: block;
+    margin: 0;
+}
+
+.findus__online-logo-container {
+    width: 400px;
+    margin-top: 10px;
+}
+
+.findus__online-ebaglogo {
+    width: 200px;
+    height: auto;
+    margin: 5px 10px;
+}
+
+.findus__online-laikalogo {
+    width: 150px;
+    height: auto;
+    margin: 5px 10px;
+}
+
 /*footer*/
 
 footer {
@@ -332,7 +374,7 @@ footer {
     text-align: center;
     padding: 10px;
     color: white;
-        font-family: blogger, sans-serif;
+    font-family: blogger, sans-serif;
 
 }
 
@@ -437,14 +479,48 @@ footer img {
     }
 
     .header-scroll {
-    /* background-color: #FF6900 !important; */
-    background-color: white !important;
-}
-
-    @media (max-width: 700px) {
-        .home__main-image {
-                background-image: url("img/home-page/suupa-both-tall.png");
-        }
+        /* background-color: #FF6900 !important; */
+        background-color: white !important;
     }
 
+    .findus__online {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .findus__online-logo-container {
+        width: 400px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .home__main-image {
+        background-image: url("img/home-page/suupa-both-tall.png");
+    }
+}
+
+@media (max-width: 450px) {
+    .findus__online-logo-container {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .findus__online {
+        width: 300px;
+        margin-top: 50px;
+        height: 95px;
+    }
+
+    .findus__online-ebaglogo {
+        width: 100px;
+        height: auto;
+        margin: 5px 10px;
+    }
+
+    .findus__online-laikalogo {
+        width: 90px;
+        height: auto;
+        margin: 5px 10px;
+    }
 }

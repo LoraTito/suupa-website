@@ -16,6 +16,8 @@ function showHeader() {
 }
 
 function myFunction(x) {
+    // document.getElementById("findus__online").classList.toggle("hide");
     document.getElementById("mobile-menu").classList.toggle("mobile-nav");
     x.classList.toggle("change");
+
 }

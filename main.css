@@ -510,6 +510,16 @@ footer img {
     .home__main-image {
         background-image: url("img/home-page/suupa-both-tall.png");
     }
+
+
+    .social-media {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .social-media img {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 450px) {

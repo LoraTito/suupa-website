@@ -365,6 +365,20 @@ h1 {
     margin: 5px 10px;
 }
 
+
+/*products*/
+
+.lentils-soup {
+    height: 90vh;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.lentils-soup img {
+    float: right;
+    width: 300px;
+}
+
 /*footer*/
 
 footer {
